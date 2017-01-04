@@ -4,7 +4,7 @@ title: Obtaining and Installing NJOY
 permalink: /Build/index.html
 ---
 
-Both [NJOY21](/NJOY21.html) and [NJOY2016](/NJOY2016.html) use the same configuration and build process.
+Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) use the same configuration and build process.
 
 ## Prerequisites
 Development for NJOY uses the latest published language standards that are widely supported by compiler vendors, *at the start of development*. Therefore, the minimum language standards are
