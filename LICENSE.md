@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 =======
 ---
-layout: page
+layout: default
 ---
 >>>>>>> f46cfc3b3edb070c35ba41e56cca4d6bf7963afb
 Copyright (c) 2016, Los Alamos National Security, LLC
