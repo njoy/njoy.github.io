@@ -39,6 +39,7 @@ Additionally, we use [CMake](https://cmake.org/) to configure the build system a
 
 
 ## Build Process
+
 ### Downloading
 To download NJOY21, simply `git clone` the repository. First move into the directory where you want the source code
 
@@ -107,3 +108,7 @@ We have tested NJOY2016 and NJOY21 with the following compilers
 
    - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers
 
+
+ - **Mac:**
+  
+   - [Intel](https://software.intel.com/en-us/fortran-compilers/details#OSX)

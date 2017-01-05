@@ -16,10 +16,6 @@ For the first time, NJOY is freely available under the BSD 3-clause license. Bot
 ### Getting NJOY
 Instructions for obtaining, compiling, and testing NJOY can be found [here](Build/).
 
-### License
-NJOY is released under the BSD 3-clause license. The license and copyright can
-be found in the [LICENSE](LICENSE.md) file.
-
 ## Support or Contact
 Technical support for both versions of NJOY can be obtained with an email to: [njoy@lanl.gov](mailto:njoy@lanl.gov).
 
