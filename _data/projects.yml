@@ -1,0 +1,85 @@
+# Below is a manually updated list of the NJOY subprojects. 
+# The url should point to the GitHub page for the repository 
+#   (i.e., http://github.com/njoy/project)
+# unless the website documentation has been created for it at which point the
+# url should point to the website url
+#   (i.e., https://njoy.github.io/project)
+Projects:
+  - name: "NJOY21"
+    url: "https://github.com/njoy/NJOY21"
+    description: ""
+
+  - name: "NJOY2016"
+    url: "https://github.com/njoy/NJOY2016"
+    description: "Legacy NJOY version to which NJOY21 is linked."
+
+  - name: "nuclearData"
+    url: "https://github.com/njoy/nuclearData"
+    description: "Common interface for accessing nuclear data, regardless of its source."
+
+  - name: "ENDFtk"
+    url: "https://github.com/njoy/ENDFtk"
+    description: "Toolkit for reading and interating with ENDF-6-formatted files."
+
+  - name: "ACEtk"
+    url: "https://github.com/njoy/ENDFtk"
+    description: "Toolkit for reading and interating with ACE-formatted files."
+
+  - name: "math"
+    url: "https://github.com/njoy/math"
+    description: "A library providing mathematical algorithms encountered in nuclear data."
+
+  - name: "utility"
+    url: "https://njoy.github.io/utility"
+    description: "Generic utilities used throughout all NJOY subprojects."
+
+  - name: "header-utilities"
+    url: "https://github.com/njoy/header-utilities"
+    description: 'A header distilling a subset of the <a href="https://njoy.github.io/utility">utility</a> library for use with header-only libraries.'
+
+  - name: "disco"
+    url: "https://github.com/njoy/disco"
+    description: "Header-only library for parsing data in fixed-width ascii format."
+
+  - name: "DimensionalAnalysis"
+    url: "https://github.com/njoy/DimensionalAnalysis"
+    description: "Compact C++ header-only library providing compile-time dimensional analysis and unit awareness."
+
+  - name: "metaconfigure"
+    url: "https://github.com/njoy/metaconfigure"
+    description: "Python scripts assisting in the generation of the build system configuration."
+
+Supporting:
+  - name: "njoy.github.io"
+    url: "https://github.com/njoy/njoy.github.io"
+    description: "Repository for the main webpage http://njoy.github.io"
+
+  - name: "jekyll-website"
+    url: "https://github.com/njoy/jekyll-website"
+    description: "Repository containing necessary jekyll commands, etc. to ensure that the look of the website remains consistent across all the projects."
+
+  - name: "DevelopersGuide"
+    url: "https://njoy.github.io/DevelopersGuide"
+    description: "Documents containing the expectations and instructions for those desiring to contribute to the development of NJOY21."
+
+ThirdParty:
+  - name: "catch-adapter"
+    url: "https://github.com/apmccartney/catch-adapter"
+    description: 'Adater for <a href="https://github.com/philsquared/Catch">Catch</a>, a unit test project.'
+
+  - name: "tclap-adapter"
+    url: "https://github.com/apmccartney/tclap-adapter"
+    description: 'Adapter for <a href="https://github.com/TCLAP/tclap">TCLAP</a>, a header-only library.'
+
+  - name: "fmt-adapter"
+    url: "https://github.com/apmccartney/fmt-adapter"
+    description: 'Adatper for <a href="http://fmtlib.net/">fmt</a>, an open-source formatting library.'
+
+  - name: "spdlog-adapter"
+    url: "https://github.com/apmccartney/spdlog-adapter"
+    description: 'Adapter for <a href="https://github.com/gabime/spdlog">spdlog</a>, a header-only logging library.'
+
+  - name: "hana-adapter"
+    url: "https://github.com/apmccartney/hana-adapter"
+    description: 'Adapter for <a href="https://github.com/boostorg/hana">Boost Hana</a>, a metaprogramming library.'
+

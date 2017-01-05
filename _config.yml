@@ -10,9 +10,7 @@ title: NJOY
 subtitle: Nuclear Data Processing-from Los Alamos National Laboratory
 email: njoy@lanl.gov
 
-description: > # this means to ignore newlines until "baseurl:"
-  Website for documentation and code for the development of NJOY, a nuclear data 
-  processing code from Los Alamos National Laboratory.
+description: NJOY nuclear data processing from LANL
 
 url: "http://njoy.lanl.gov" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
@@ -28,4 +26,4 @@ port: 8000
 baseurl: "" # the subpath of your site, e.g. /blog
 
 exclude: [vendor]
-include: ['Developers', 'Build']
+include: ['Developers', 'Build', 'LICENSE.md']

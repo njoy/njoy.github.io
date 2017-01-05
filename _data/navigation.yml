@@ -2,7 +2,10 @@
    url: "/Build/index.html"
 
  - title: "Developers"
-   url: "/Developers/index.html"
+   url: "https://njoy.github.io/DevelopersGuide"
+
+ - title: "Projects"
+   url: "/Projects.html"
 
  - title: "About"
    url: "/about/index.html"
