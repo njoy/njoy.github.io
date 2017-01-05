@@ -7,7 +7,7 @@
 Projects:
   - name: "NJOY21"
     url: "https://github.com/njoy/NJOY21"
-    description: ""
+    description: "Next generation of NJOY designed to be easier, faster, more flexible, and more maintainable."
 
   - name: "NJOY2016"
     url: "https://github.com/njoy/NJOY2016"
@@ -64,22 +64,22 @@ Supporting:
 
 ThirdParty:
   - name: "catch-adapter"
-    url: "https://github.com/apmccartney/catch-adapter"
+    url: "https://github.com/njoy/catch-adapter"
     description: 'Adater for <a href="https://github.com/philsquared/Catch">Catch</a>, a unit test project.'
 
   - name: "tclap-adapter"
-    url: "https://github.com/apmccartney/tclap-adapter"
+    url: "https://github.com/njoy/tclap-adapter"
     description: 'Adapter for <a href="https://github.com/TCLAP/tclap">TCLAP</a>, a header-only library.'
 
   - name: "fmt-adapter"
-    url: "https://github.com/apmccartney/fmt-adapter"
+    url: "https://github.com/njoy/fmt-adapter"
     description: 'Adatper for <a href="http://fmtlib.net/">fmt</a>, an open-source formatting library.'
 
   - name: "spdlog-adapter"
-    url: "https://github.com/apmccartney/spdlog-adapter"
+    url: "https://github.com/njoy/spdlog-adapter"
     description: 'Adapter for <a href="https://github.com/gabime/spdlog">spdlog</a>, a header-only logging library.'
 
   - name: "hana-adapter"
-    url: "https://github.com/apmccartney/hana-adapter"
+    url: "https://github.com/njoy/hana-adapter"
     description: 'Adapter for <a href="https://github.com/boostorg/hana">Boost Hana</a>, a metaprogramming library.'
 
