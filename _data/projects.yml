@@ -52,7 +52,7 @@ Projects:
 Supporting:
   - name: "njoy.github.io"
     url: "https://github.com/njoy/njoy.github.io"
-    description: "Repository for the main webpage http://njoy.github.io"
+    description: "Repository for the main webpage <a href='http://njoy.lanl.gov'>http://njoy.lanl.gov</a>"
 
   - name: "jekyll-website"
     url: "https://github.com/njoy/jekyll-website"
