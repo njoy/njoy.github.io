@@ -3,6 +3,8 @@ layout: page
 title: Obtaining and Installing NJOY
 permalink: /Build/index.html
 ---
+* TOC
+{:toc}
 
 Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) use the same configuration and build process. Additionally, all of the supporting [projects](/Projects.html) use the same process. 
 
@@ -84,8 +86,10 @@ If all the tests pass, you should see something that looks like:
 100% tests passed, 0 tests failed out of 90
 ```
 
-### C++14 Compliant Compiler
+## Compliant Compilers
 We have tested NJOY2016 and NJOY21 with the following compilers
+
+### C++14 Compliant Compiler
 
   - **Mac:**
 
