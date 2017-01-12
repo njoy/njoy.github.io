@@ -13,21 +13,25 @@ Projects:
     url: "https://njoy.github.io/NJOY2016"
     description: "Legacy NJOY version to which NJOY21 is linked."
 
-  - name: "nuclearData"
-    url: "https://github.com/njoy/nuclearData"
-    description: "Common interface for accessing nuclear data, regardless of its source."
+  - name: "NJOY2016-manual"
+    url: "https://github.com/njoy/NJOY2016-manual"
+    description: "LaTeX source for the NJOY2016 manual."
+
+# - name: "nuclearData"
+#   url: "https://github.com/njoy/nuclearData"
+#   description: "Common interface for accessing nuclear data, regardless of its source."
 
   - name: "ENDFtk"
     url: "https://github.com/njoy/ENDFtk"
-    description: "Toolkit for reading and interating with ENDF-6-formatted files."
+    description: "Toolkit for reading and interacting with ENDF-6-formatted files."
 
   - name: "ACEtk"
     url: "https://github.com/njoy/ENDFtk"
-    description: "Toolkit for reading and interating with ACE-formatted files."
+    description: "Toolkit for reading and interacting with ACE-formatted files."
 
-  - name: "math"
-    url: "https://github.com/njoy/math"
-    description: "A library providing mathematical algorithms encountered in nuclear data."
+# - name: "math"
+#   url: "https://github.com/njoy/math"
+#   description: "A library providing mathematical algorithms encountered in nuclear data."
 
   - name: "utility"
     url: "https://njoy.github.io/utility"
