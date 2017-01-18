@@ -22,7 +22,7 @@ data files that is fast, easy, and convenient.
     1. Verified and Validated—Every function and feature is automatically,
     frequently, and regularly tested
     2. Every feature of NJOY will be documented
-    3. Remain backwards compatible with NJOY2012
+    3. Remain backwards compatible with NJOY2016
     4. Provide tools for verification of formats and validation of data
 
  2. Easier
