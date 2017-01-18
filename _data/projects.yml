@@ -6,7 +6,7 @@
 #   (i.e., https://njoy.github.io/project)
 Projects:
   - name: "NJOY21"
-    url: "https://njoy.github.io/NJOY21"
+    url: "https://github.com/njoy"
     description: "Next generation of NJOY designed to be easier, faster, more flexible, and more maintainable."
 
   - name: "NJOY2016"

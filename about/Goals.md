@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Mission, Vision, Goals
-permalink: /about/NJOY21-Goals
+permalink: /about/Goals
 ---
+# Mission, Vision, Goals
+
 ## Vision
 NJOY21 will be the gold standard of nuclear data processing codes by providing a
 trusted and verified processing code that is fast, flexible, easy to use and 
@@ -20,7 +22,7 @@ data files that is fast, easy, and convenient.
     1. Verified and Validated—Every function and feature is automatically,
     frequently, and regularly tested
     2. Every feature of NJOY will be documented
-    3. Remain backwards compatible with NJOY2012
+    3. Remain backwards compatible with NJOY2016
     4. Provide tools for verification of formats and validation of data
 
  2. Easier

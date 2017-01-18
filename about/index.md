@@ -9,7 +9,7 @@ NJOY is a nuclear data processing code developed at [Los Alamos National Laborat
 ## NJOY21—NJOY for the 21st Century
 NJOY21 is the next generation of NJOY designed to modernize nuclear data processing including the ability to process nuclear data from multiple data formats. NJOY21 has been released as open-source software without any export control restrictions. NJOY21 can be found on [GitHub](https://github.com/njoy/NJOY21).
 
-The goals for NJOY21 can be found at the [Vision, Mission, Goals](/about/NJOY21-Goals.html) page.
+The goals for NJOY21 can be found at the [Vision, Mission, Goals](/about/Goals.html) page.
 
 ## NJOY2016
 NJOY2016 is the latest version of the Fortran-based code. New with NJOY2016 is that it is being distributed as open-source software, without any export control restriction. NJOY2016 can be found on [GitHub](https://github.com/njoy/NJOY2016).
