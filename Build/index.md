@@ -75,6 +75,7 @@ You can provide the command-line option `-j n` (where `n` is the number of concu
 
 ### Testing
 
+
 ```bash
 make test
 ```
@@ -84,6 +85,33 @@ If all the tests pass, you should see something that looks like:
 
 ```
 100% tests passed, 0 tests failed out of 90
+```
+
+### Building Offline
+For this configuration/build process, a connection to the internet is required as subprojects are are downloaded from GitHub. There are many instances when one would need to build NJOY on a machine that is not connected to the internet. To do that, please use these steps:
+
+```bash
+# Download the source code
+git clone https://github.com/njoy/NJOY21.git
+
+# Configure the build process
+cd NJOY21
+./metaconfigure/fetch_subprojects.py
+rm -rf subprojects/
+
+#### Transfer the NJOY21 directory to machine that is not connected 
+
+cd NJOY21
+./metaconfigure/collect_subprojects.py
+mkdir bin
+cd bin
+cmake -Dfetched_subprojects=TRUE ../
+
+# Build NJOY21
+make
+
+# Test NJOY21
+make test
 ```
 
 ## Compliant Compilers
