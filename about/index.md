@@ -7,7 +7,7 @@ permalink: /about/
 NJOY is a nuclear data processing code developed at [Los Alamos National Laboratory](http://www.lanl.gov). 
 
 ## NJOY21—NJOY for the 21st Century
-NJOY21 is the next generation of NJOY designed to modernize nuclear data processing including the ability to process nuclear data from multiple data formats. NJOY21 has been released as open-source software without any export control restrictions. NJOY21 can be found on [GitHub](https://github.com/njoy/NJOY21).
+NJOY21 is the next generation of NJOY designed to modernize nuclear data processing including the ability to process nuclear data from multiple data formats. NJOY21 has been released as open-source software without any export control restrictions. NJOY21 can be found on [GitHub](https://njoy.github.io/NJOY21).
 
 The goals for NJOY21 can be found at the [Vision, Mission, Goals](/about/Goals.html) page.
 
