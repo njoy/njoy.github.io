@@ -115,7 +115,7 @@ make test
 ```
 
 ## Compliant Compilers
-We have tested NJOY2016 and NJOY21 with the following compilers
+We have tested NJOY2016 and NJOY21 with the following compilers. Note we don't support using the Intel compiler on any platform. It has some issues when using the Fortran and C++ compilers together.
 
 ### C++14 Compliant Compiler
 
@@ -138,9 +138,13 @@ We have tested NJOY2016 and NJOY21 with the following compilers
 
  - **Linux:**
 
-   - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers
+   - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers.
 
 
  - **Mac:**
   
-   - [Intel](https://software.intel.com/en-us/fortran-compilers/details#OSX)
+   - [gfortran](https://gcc.gnu.org/fortran/) A binary can be downloaded from [hpc.sourceforge.net](http://hpc.sourceforge.net).
+
+ - **Windows:**
+
+   - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers.
