@@ -17,5 +17,5 @@ For the first time, NJOY is freely available under the BSD 3-clause license. Bot
 Instructions for obtaining, compiling, and testing NJOY can be found [here](Build/).
 
 ## Support or Contact
-Technical support for both versions of NJOY can be obtained with an email to: [njoy@lanl.gov](mailto:njoy@lanl.gov).
+Technical support for both versions of NJOY can be obtained with an email to: [njoy@lanl.gov](mailto:njoy@lanl.gov). NJOY developers are also found lurking in the [NJOY-help](https://gitter.im/njoy/NJOY-help) chat room. Come visit if you have any questions.
 
