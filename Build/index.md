@@ -132,7 +132,7 @@ We have tested NJOY2016 and NJOY21 with the following compilers. Note we don't s
     - [clang 3.7](http://llvm.org)
     - [gcc 6.2](https://gcc.gnu.org) 
 
-    Note that in Windows we currently currently test and support NJOY2016 and NJOY21 only under the Cygwin environment.
+    Note that in Windows we currently test and support NJOY2016 and NJOY21 only under the Cygwin environment.
 
 ### Fortran 2003 Compliant Compiler
 
