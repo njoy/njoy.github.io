@@ -12,7 +12,7 @@ Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) u
 
 ```bash
 # Download the source code
-git clone https://github.com/njoy/NJOY21.git
+git clone https://github.com/njoy/NJOY16.git
 
 # Configure the build process
 cd NJOY21
@@ -20,10 +20,10 @@ mkdir bin
 cd bin
 cmake ../
 
-# Build NJOY21
+# Build NJOY16
 make
 
-# Test NJOY21
+# Test NJOY16
 make test
 ```
 
@@ -141,9 +141,9 @@ We have tested NJOY2016 and NJOY21 with the following compilers. Note we don't s
    - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers.
 
 
- - **Mac:**
-  
-   - [gfortran](https://gcc.gnu.org/fortran/) A binary can be downloaded from [hpc.sourceforge.net](http://hpc.sourceforge.net).
+ - **Mac:*
+
+   - [gfortran](https://gcc.gnu.org/fortran/) A binary can be downloaded from [hpc.sourceforge.net](http://hpc.sourceforge.net). Alternatively, installing gcc 6.3 via [homebrew](https://brew.sh) works quite well. Note, the build for gcc 6.2 provided by homebrew does not work.
 
  - **Windows:**
 
