@@ -12,10 +12,10 @@ Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) u
 
 ```bash
 # Download the source code
-git clone https://github.com/njoy/NJOY16.git
+git clone https://github.com/njoy/NJOY2016.git
 
 # Configure the build process
-cd NJOY21
+cd NJOY2016
 mkdir bin
 cd bin
 cmake ../
