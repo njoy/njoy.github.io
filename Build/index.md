@@ -43,16 +43,25 @@ Additionally, we use [CMake](https://cmake.org/) to configure the build system a
 ## Build Process
 
 ### Downloading
-To download NJOY21, simply `git clone` the repository. First move into the directory where you want the source code
-
-```bash
-git clone https://github.com/njoy/NJOY21.git
-```
-Similarly for NJOY2016
+To download NJOY2016, simply `git clone` the repository. First move into the directory where you want the source code
 
 ```bash
 git clone https://github.com/njoy/NJOY2016.git
 ```
+Similarly for NJOY21
+
+```bash
+git clone https://github.com/njoy/NJOY21.git
+```
+
+#### Updating NJOY to Incorporate Changes
+If you already have NJOY cloned then you can easily update to the latest version with a simple command:
+
+```bash
+git pull
+```
+This will "pull" all the changes that have been made to your local machine. You can continue to follow the instructions for configuring and building.
+
     
 ### Configuring
 The configuration and build is performed in a directory (`bin`) inside the source directory
