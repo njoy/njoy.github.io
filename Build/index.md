@@ -32,12 +32,24 @@ Development for NJOY uses the latest published language standards that are widel
 
  - C++14 or higher
  - Fortran 2003 or higher
- - [Python 3.4+](https://python.org/)
+ - [Python 3.4+](https://python.org/downloads/)
 
 Additionally, we use [CMake](https://cmake.org/) to configure the build system and [git](https://git-scm.com) for version control.
 
- - [CMake 3.2+](https://cmake.org/) 
- - [git 2.1+](https://git-scm.com)
+ - [CMake 3.2+](https://cmake.org/download/) - Latest Release 
+ - [git 2.1+](https://git-scm.com/downloads/)
+
+### On Windows
+When running on Windows, the compilers must be obtained separately. The following options are available:
+
+ - Build in cmd using [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)
+   - Add \[install directory\]\\mingw64\\bin to the system path
+   - Optionally:
+     - Add path to mingw64\\bin\\gcc.exe to CC environment variable (NJOY21 only)
+     - Add path to mingw64\\bin\\g++.exe to CXX environment variable (NJOY21 only)
+     - Add path to mingw64\\bin\\gfortran.exe to FC environment variable
+     - Example: `set FC=C:\MinGW64\mingw64\bin\gfortran.exe`
+ - Build in a unix-like environment using [Cygwin](https://cygwin.com/install.html)
 
 
 ## Build Process
@@ -52,6 +64,10 @@ Similarly for NJOY21
 
 ```bash
 git clone https://github.com/njoy/NJOY21.git
+```
+When behind a http proxy (ex. inside LANL network), you must first inform git what the proxy is
+```bash
+git config --global http.proxy http://institution.proxy:port
 ```
 
 #### Updating NJOY to Incorporate Changes
@@ -75,18 +91,29 @@ cmake ../
 
 Note this will require a connection to the internet as `cmake` command will download (`clone`) the necessary dependencies. These will be placed in the `dependencies` directory.
 
+Note, when using Windows, the final command must include the option `-G "MinGW Makefiles"` or `-G "Unix Makefiles"` when using MinGW or Cygwin, respectively.
+
 ### Compiling/Building
 
+#### On Linux, Mac, or Windows with Cygwin
 ```bash
 make
+```
+#### On Windows with MinGW
+```bash
+mingw32-make.exe
 ```
 You can provide the command-line option `-j n` (where `n` is the number of concurrent/parallel "jobs") to speed up the compilation step.
 
 ### Testing
 
-
+#### Linux, Mac, Windows with Cygwin
 ```bash
 make test
+```
+#### Windows with MinGW
+```bash
+mingw32-make.exe test
 ```
 Like for the compiling step, you can pass the `-j` command-line option here as well.
 
