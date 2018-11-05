@@ -17,10 +17,6 @@ Projects:
     url: "https://github.com/njoy/NJOY2016-manual"
     description: "LaTeX source for the NJOY2016 manual."
 
-# - name: "nuclearData"
-#   url: "https://github.com/njoy/nuclearData"
-#   description: "Common interface for accessing nuclear data, regardless of its source."
-
   - name: "ENDFtk"
     url: "https://github.com/njoy/ENDFtk"
     description: "Toolkit for reading and interacting with ENDF-6-formatted files."
@@ -28,11 +24,6 @@ Projects:
   - name: "ACEtk"
     url: "https://github.com/njoy/ACEtk"
     description: "Toolkit for reading and interacting with ACE-formatted files."
-
-# - name: "math"
-#   url: "https://github.com/njoy/math"
-#   description: "A library providing mathematical algorithms encountered in nuclear data."
-
   - name: "utility"
     url: "https://njoy.github.io/utility"
     description: "Generic utilities used throughout all NJOY subprojects."
@@ -70,10 +61,6 @@ ThirdParty:
   - name: "catch-adapter"
     url: "https://github.com/njoy/catch-adapter"
     description: 'Adater for <a href="https://github.com/philsquared/Catch">Catch</a>, a unit test project.'
-
-  - name: "tclap-adapter"
-    url: "https://github.com/njoy/tclap-adapter"
-    description: 'Adapter for <a href="https://github.com/TCLAP/tclap">TCLAP</a>, a header-only library.'
 
   - name: "fmt-adapter"
     url: "https://github.com/njoy/fmt-adapter"
