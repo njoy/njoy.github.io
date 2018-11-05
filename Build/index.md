@@ -12,18 +12,18 @@ Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) u
 
 ```bash
 # Download the source code
-git clone https://github.com/njoy/NJOY2016.git
+git clone https://github.com/njoy/NJOY21.git
 
 # Configure the build process
-cd NJOY2016
+cd NJOY21
 mkdir bin
 cd bin
-cmake ../
+cmake -D CMAKE_BUILD_TYPE=release ../
 
-# Build NJOY16
+# Build NJOY1
 make
 
-# Test NJOY16
+# Test NJOY1
 make test
 ```
 
@@ -43,15 +43,15 @@ Additionally, we use [CMake](https://cmake.org/) to configure the build system a
 ## Build Process
 
 ### Downloading
-To download NJOY2016, simply `git clone` the repository. First move into the directory where you want the source code
-
-```bash
-git clone https://github.com/njoy/NJOY2016.git
-```
-Similarly for NJOY21
+To download NJOY21, simply `git clone` the repository. First move into the directory where you want the source code, then execute:
 
 ```bash
 git clone https://github.com/njoy/NJOY21.git
+```
+Similarly for NJOY2016
+
+```bash
+git clone https://github.com/njoy/NJOY2016.git
 ```
 
 #### Updating NJOY to Incorporate Changes
@@ -73,7 +73,14 @@ cd bin
 cmake ../
 ```
 
+There are two a few options that can be passed to `cmake`, the most important one specifies the build type; whether you want it built in debug mode (slow, but useful when debugging) or in release mode (fast, but doesn't have the debug information). To specify a build type, add the following command-line option to `cmake`:
+
 Note this will require a connection to the internet as `cmake` command will download (`clone`) the necessary dependencies. These will be placed in the `dependencies` directory.
+
+```bash
+cmake -D CMAKE_BUILD_TYPE=release ../ # for fast execution
+cmake -D CMAKE_BUILD_TYPE=debug ../ # for debug
+```
 
 ### Compiling/Building
 
@@ -124,7 +131,7 @@ make test
 ```
 
 ## Compliant Compilers
-We have tested NJOY2016 and NJOY21 with the following compilers. Note we don't support using the Intel compiler on any platform. It has some issues when using the Fortran and C++ compilers together.
+We have tested NJOY2016 and NJOY21 with the following compilers. 
 
 ### C++14 Compliant Compiler
 
@@ -157,3 +164,5 @@ We have tested NJOY2016 and NJOY21 with the following compilers. Note we don't s
  - **Windows:**
 
    - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers.
+
+Other compilers will most likely compile without any problems, but may give different answers. The differences are typically small and due to different ways of optimizing the code from each compiler.
