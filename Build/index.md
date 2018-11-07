@@ -6,7 +6,7 @@ permalink: /Build/index.html
 * TOC
 {:toc}
 
-Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) use the same configuration and build process. Additionally, all of the supporting [projects](/Projects.html) use the same process. 
+Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) use the same configuration and build process. Additionally, all of the supporting [components](/Components.html) use the same process. 
 
 ### For the impatient
 
@@ -14,11 +14,15 @@ Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) u
 # Download the source code
 git clone https://github.com/njoy/NJOY21.git
 
-# Configure the build process
+# Get the desired version of NJOY21 (1.0.0 in this example)
 cd NJOY21
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.0-NJOY21.json
+./metaconfigure/fetch_subprojects.py 1.0.0-NJOY21.json
+
+# Configure the build process
 mkdir bin
 cd bin
-cmake -D CMAKE_BUILD_TYPE=release ../
+cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=release ../
 
 # Build NJOY1
 make
@@ -41,6 +45,7 @@ Additionally, we use [CMake](https://cmake.org/) to configure the build system a
 
 
 ## Build Process
+Those interested in the NJOY21 development version should [read here](developers.html) for slightly different build instructions.
 
 ### Downloading
 To download NJOY21, simply `git clone` the repository. First move into the directory where you want the source code, then execute:
@@ -48,19 +53,17 @@ To download NJOY21, simply `git clone` the repository. First move into the direc
 ```bash
 git clone https://github.com/njoy/NJOY21.git
 ```
-Similarly for NJOY2016
+In addition, you should download a signature file for the version of NJOY21 for which you are interested. The signatures can be found in our repository on GitHub at [https://github.com/njoy/signatures/NJOY21](https://github.com/njoy/signatures/tree/master/NJOY21). For this example we will use the signature file: [1.0.0-NJOY21.json](https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.0-NJOY21.json). Save this file inside the NJOY21 directory that was created during the `git clone` operation.
 
+```bash
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.0-NJOY21.json
+```
+You can inspect the json file before downloading it by looking at the [signatures repository](https://github.com/njoy/signatures) on GitHub.
+
+Similarly for NJOY2016
 ```bash
 git clone https://github.com/njoy/NJOY2016.git
 ```
-
-#### Updating NJOY to Incorporate Changes
-If you already have NJOY cloned then you can easily update to the latest version with a simple command:
-
-```bash
-git pull
-```
-This will "pull" all the changes that have been made to your local machine. You can continue to follow the instructions for configuring and building.
 
     
 ### Configuring
@@ -68,19 +71,13 @@ The configuration and build is performed in a directory (`bin`) inside the sourc
 
 ```bash
 cd NJOY21
+./metaconfigure/fetch_subprojects.py ../1.0.0-NJOY21.json
 mkdir bin
 cd bin
-cmake ../
+cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=release ../
 ```
-
-There are two a few options that can be passed to `cmake`, the most important one specifies the build type; whether you want it built in debug mode (slow, but useful when debugging) or in release mode (fast, but doesn't have the debug information). To specify a build type, add the following command-line option to `cmake`:
 
 Note this will require a connection to the internet as `cmake` command will download (`clone`) the necessary dependencies. These will be placed in the `dependencies` directory.
-
-```bash
-cmake -D CMAKE_BUILD_TYPE=release ../ # for fast execution
-cmake -D CMAKE_BUILD_TYPE=debug ../ # for debug
-```
 
 ### Compiling/Building
 
@@ -112,16 +109,15 @@ git clone https://github.com/njoy/NJOY21.git
 
 # Configure the build process
 cd NJOY21
-./metaconfigure/fetch_subprojects.py
-rm -rf subprojects/
+./metaconfigure/fetch_subprojects.py ../1.0.0-NJOY21.json
 
-#### Transfer the NJOY21 directory to machine that is not connected 
+#### Transfer the enture NJOY21 directory to machine not connected to the internet
 
 cd NJOY21
 ./metaconfigure/collect_subprojects.py
 mkdir bin
 cd bin
-cmake -Dfetched_subprojects=TRUE ../
+cmake -D fetched_subprojects=TRUE ../
 
 # Build NJOY21
 make
@@ -141,14 +137,14 @@ We have tested NJOY2016 and NJOY21 with the following compilers.
 
   - **Linux:**
 
-    - [gcc 6.2](https://gcc.gnu.org) 
+    - [gcc 6.4](https://gcc.gnu.org) 
 
   - **Windows:**
 
     - [clang 3.7](http://llvm.org)
-    - [gcc 6.2](https://gcc.gnu.org) 
+    - [gcc 6.4](https://gcc.gnu.org) 
 
-    Note that in Windows we currently test and support NJOY2016 and NJOY21 only under the Cygwin environment.
+    Note that in Windows we currently support compiling and running under the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) or the Cygwin environment. If you have the necesssary components installed, this *should* also work in the DOS environment.
 
 ### Fortran 2003 Compliant Compiler
 
@@ -157,9 +153,9 @@ We have tested NJOY2016 and NJOY21 with the following compilers.
    - [gfortran](https://gcc.gnu.org/fortran/) This is included as part of the standard [gcc](https://gcc.gnu.org) suite of compilers.
 
 
- - **Mac:*
+ - **Mac:**
 
-   - [gfortran](https://gcc.gnu.org/fortran/) A binary can be downloaded from [hpc.sourceforge.net](http://hpc.sourceforge.net). Alternatively, installing gcc 6.3 via [homebrew](https://brew.sh) works quite well. Note, the build for gcc 6.2 provided by homebrew does not work.
+   - Installing gcc 6.4 via [homebrew](https://brew.sh) works quite well.
 
  - **Windows:**
 
