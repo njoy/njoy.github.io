@@ -14,6 +14,13 @@ The instructions for building the development version is very similar to that of
 git clone https://github.com/njoy/NJOY21.git
 ```
 
+## Updating
+Due to the convenience of using git, updating the local NJOY21 repository is simple:
+
+```bash
+git pull
+```
+
 # Configuring
 ```bash
 cd NJOY21
@@ -41,6 +48,15 @@ There are a few options that can be given as command-line options to `cmake` tha
   - `ON` (default)
   - `OFF`
 
+There are many other options available from `cmake` that are not given here. One of particular interest is:
+
+- `CMAKE_INSTALL_PREFIX` With this option, you can specify where you want NJOY21 installed, such as:
+  ```bash
+  cmake -D CMAKE_INSTALL_PREFIX=~/bin ../
+  ```
+  This will install the compiled binary and headers in the `bin` directory in your home directory.
+
+Other `cmake` options can be found on their [website](https://cmake.org).
 # Compiling/Building
 ```bash
 make
@@ -64,5 +80,12 @@ If all the tests pass, you should see something that looks like:
 100% tests passed, 0 tests failed out of 90
 ```
 
+# Installing
+Installation of NJOY21 is done like most any other project:
+```bash
+sudo make install
+```
+By default this will install the compiled binary and associated headers into `/usr/local`. (This can be changed using the `CMAKE_INSTALL_PREFIX` option as discussed above.) **Note** that this will require sufficient permissions to write to the appropriate install directory (thus the use of `sudo`).
+
 # Building Offline
-The options for building offline are the same as shown in the [standard building process](index.html)
+The options for building offline are the same as shown in the [standard building process](index.html).
