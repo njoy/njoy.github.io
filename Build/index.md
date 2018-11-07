@@ -101,7 +101,7 @@ If all the tests pass, you should see something that looks like:
 ```
 
 ### Building Offline
-For this configuration/build process, a connection to the internet is required as subprojects are are downloaded from GitHub. There are many instances when one would need to build NJOY on a machine that is not connected to the internet. To do that, please use these steps:
+For this configuration/build process, a connection to the internet is required as subprojects are downloaded from GitHub. There are many instances when one would need to build NJOY on a machine that is not connected to the internet. To do that, please use these steps:
 
 ```bash
 # Download the source code
@@ -111,13 +111,13 @@ git clone https://github.com/njoy/NJOY21.git
 cd NJOY21
 ./metaconfigure/fetch_subprojects.py ../1.0.0-NJOY21.json
 
-#### Transfer the enture NJOY21 directory to machine not connected to the internet
+#### Transfer the entire NJOY21 directory to machine 
+#### not connected to the internet
 
 cd NJOY21
-./metaconfigure/collect_subprojects.py
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=TRUE ../
+cmake -D fetched_subprojects=TRUE -D CMAKE_BUILD_TYPE=release ../
 
 # Build NJOY21
 make

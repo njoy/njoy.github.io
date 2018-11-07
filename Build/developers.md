@@ -35,7 +35,7 @@ There are a few options that can be given as command-line options to `cmake` tha
 - `CMAKE_BUILD_TYPE` This is how you can specify whether you want to build in debug or release mode. Available options:
   - `debug` (default) This will build non-optimized with all the debug symbols in the code. 
   - `release` This configures NJOY21 for fast, optimized code.
-- `fetched_subprojects` This indicates whether or not the components (subprojects) have already been "fetched" or downloaded. This is important when building offline.
+- `fetched_subprojects` This indicates whether or not the components (subprojects) have already been "fetched" or downloaded. This is important when building offline or when building a specific tagged version (using a signature file).
   - `true` Specifies that the components have already been downloaded. Available options:
   - `false` (default) Components will be downloaded (using `git`) during the configuration phase.
 - `unit_tests` Specify where or not to build the unit tests. Available options:
