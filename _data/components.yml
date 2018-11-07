@@ -45,8 +45,8 @@ Components:
     description: "Python scripts assisting in the generation of the build system configuration."
 
 Supporting:
-  - name: "www.njoy21.io"
-    url: "https://github.com/njoy/www.njoy21.io"
+  - name: "njoy.github.io"
+    url: "https://github.com/njoy/njoy.github.io"
     description: "Repository for the main webpage <a href='http://njoy.lanl.gov'>http://njoy.lanl.gov</a>"
 
   - name: "jekyll-website"
