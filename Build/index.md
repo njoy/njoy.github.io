@@ -34,7 +34,7 @@ make test
 ## Prerequisites
 Development for NJOY uses the latest published language standards that are widely supported by compiler vendors, *at the start of development*. Therefore, the minimum language standards are
 
- - C++14 or higher
+ - C++17 or higher
  - Fortran 2003 or higher
  - [Python 3.4+](https://python.org/)
 
@@ -53,10 +53,10 @@ To download NJOY21, simply `git clone` the repository. First move into the direc
 ```bash
 git clone https://github.com/njoy/NJOY21.git
 ```
-In addition, you should download a signature file for the version of NJOY21 for which you are interested. The signatures can be found in our repository on GitHub at [https://github.com/njoy/signatures/NJOY21](https://github.com/njoy/signatures/tree/master/NJOY21). For this example we will use the signature file: [1.0.1-NJOY21.json](https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.1-NJOY21.json). Save this file inside the NJOY21 directory that was created during the `git clone` operation.
+In addition, you should download a signature file for the version of NJOY21 for which you are interested. The signatures can be found in our repository on GitHub at [https://github.com/njoy/signatures/NJOY21](https://github.com/njoy/signatures/tree/master/NJOY21). For this example we will use the signature file: [1.1.0-NJOY21.json](https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json). Save this file inside the NJOY21 directory that was created during the `git clone` operation.
 
 ```bash
-wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.1-NJOY21.json
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json
 ```
 You can inspect the json file before downloading it by looking at the [signatures repository](https://github.com/njoy/signatures) on GitHub.
 
@@ -71,7 +71,7 @@ The configuration and build is performed in a directory (`bin`) inside the sourc
 
 ```bash
 cd NJOY21
-./metaconfigure/fetch_subprojects.py ../1.0.1-NJOY21.json
+./metaconfigure/fetch_subprojects.py ../1.1.0-NJOY21.json
 mkdir bin
 cd bin
 cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=release ../
@@ -109,7 +109,7 @@ git clone https://github.com/njoy/NJOY21.git
 
 # Configure the build process
 cd NJOY21
-./metaconfigure/fetch_subprojects.py ../1.0.1-NJOY21.json
+./metaconfigure/fetch_subprojects.py ../1.1.0-NJOY21.json
 
 #### Transfer the entire NJOY21 directory to machine 
 #### not connected to the internet
@@ -129,20 +129,20 @@ make test
 ## Compliant Compilers
 We have tested NJOY2016 and NJOY21 with the following compilers. 
 
-### C++14 Compliant Compiler
+### C++17 Compliant Compiler
 
   - **Mac:**
-
-    - apple clang 7.1+ (OS X 10.10, XCode 7.2.1 or higher)
+  
+    - The clang compiler that ships with XCode will be sufficient
 
   - **Linux:**
 
-    - [gcc 6.4](https://gcc.gnu.org) 
+    - [gcc 7](https://gcc.gnu.org) 
 
   - **Windows:**
 
-    - [clang 3.7](http://llvm.org)
-    - [gcc 6.4](https://gcc.gnu.org) 
+    - [clang 5](http://llvm.org)
+    - [gcc 7](https://gcc.gnu.org) 
 
     Note that in Windows we currently support compiling and running under the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) or the Cygwin environment. If you have the necesssary components installed, this *should* also work in the DOS environment.
 
@@ -155,7 +155,7 @@ We have tested NJOY2016 and NJOY21 with the following compilers.
 
  - **Mac:**
 
-   - Installing gcc 6.4 via [homebrew](https://brew.sh) works quite well.
+   - Installing gcc 7 via [homebrew](https://brew.sh) or [spack](https://spack.io) works quite well.
 
  - **Windows:**
 
