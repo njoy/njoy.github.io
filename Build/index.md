@@ -16,7 +16,7 @@ git clone https://github.com/njoy/NJOY21.git
 
 # Get the desired version of NJOY21 (1.1.0 in this example)
 cd NJOY21
-wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.1-NJOY21.json
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json
 ./metaconfigure/fetch_subprojects.py 1.1.0-NJOY21.json
 
 # Configure the build process
