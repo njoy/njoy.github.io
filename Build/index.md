@@ -14,15 +14,15 @@ Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) u
 # Download the source code
 git clone https://github.com/njoy/NJOY21.git
 
-# Get the desired version of NJOY21 (1.0.1 in this example)
+# Get the desired version of NJOY21 (1.1.0 in this example)
 cd NJOY21
-wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.0.1-NJOY21.json
-./metaconfigure/fetch_subprojects.py 1.0.1-NJOY21.json
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json
+./metaconfigure/fetch_subprojects.py 1.1.0-NJOY21.json
 
 # Configure the build process
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=release ../
+cmake -D fetched_subprojects=true ../
 
 # Build NJOY1
 make
@@ -74,7 +74,7 @@ cd NJOY21
 ./metaconfigure/fetch_subprojects.py ../1.1.0-NJOY21.json
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=release ../
+cmake -D fetched_subprojects=true ../
 ```
 
 Note this will require a connection to the internet as `cmake` command will download (`clone`) the necessary dependencies. These will be placed in the `dependencies` directory.
@@ -117,7 +117,7 @@ cd NJOY21
 cd NJOY21
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=TRUE -D CMAKE_BUILD_TYPE=release ../
+cmake -D fetched_subprojects=TRUE ../
 
 # Build NJOY21
 make
