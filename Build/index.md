@@ -14,15 +14,15 @@ Both [NJOY21](https://github.com/njoy) and [NJOY2016](https://github.com/njoy) u
 # Download the source code
 git clone https://github.com/njoy/NJOY21.git
 
-# Get the desired version of NJOY21 (1.1.0 in this example)
+# Get the desired version of NJOY21 (1.1.1 in this example)
 cd NJOY21
-wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json
-./metaconfigure/fetch_subprojects.py 1.1.0-NJOY21.json
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.1-NJOY21.json
+./metaconfigure/fetch_subprojects.py 1.1.1-NJOY21.json
 
 # Configure the build process
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=true ../
+cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=Release ../
 
 # Build NJOY1
 make
@@ -53,10 +53,10 @@ To download NJOY21, simply `git clone` the repository. First move into the direc
 ```bash
 git clone https://github.com/njoy/NJOY21.git
 ```
-In addition, you should download a signature file for the version of NJOY21 for which you are interested. The signatures can be found in our repository on GitHub at [https://github.com/njoy/signatures/NJOY21](https://github.com/njoy/signatures/tree/master/NJOY21). For this example we will use the signature file: [1.1.0-NJOY21.json](https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json). Save this file inside the NJOY21 directory that was created during the `git clone` operation.
+In addition, you should download a signature file for the version of NJOY21 for which you are interested. The signatures can be found in our repository on GitHub at [https://github.com/njoy/signatures/NJOY21](https://github.com/njoy/signatures/tree/master/NJOY21). For this example we will use the signature file: [1.1.1-NJOY21.json](https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.1-NJOY21.json). Save this file inside the NJOY21 directory that was created during the `git clone` operation.
 
 ```bash
-wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.0-NJOY21.json
+wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.1-NJOY21.json
 ```
 You can inspect the json file before downloading it by looking at the [signatures repository](https://github.com/njoy/signatures) on GitHub.
 
@@ -65,17 +65,17 @@ Similarly for NJOY2016
 git clone https://github.com/njoy/NJOY2016.git
 ```
 
-    
 ### Configuring
 The configuration and build is performed in a directory (`bin`) inside the source directory
 
 ```bash
 cd NJOY21
-./metaconfigure/fetch_subprojects.py ../1.1.0-NJOY21.json
+./metaconfigure/fetch_subprojects.py ../1.1.1-NJOY21.json
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=true ../
+cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=Release ../
 ```
+Please note that if you are using a version prior to 1.1.1, you may run into some compile errors if you build in release mode using these instructions. If you do encounter errors, simply omit `-D CMAKE_BUILD_TYPE=Release` and the errors should go away. However, it's better that you move to 1.1.1 as NJOY built in release mode runs several times faster than without it.
 
 Note this will require a connection to the internet as `cmake` command will download (`clone`) the necessary dependencies. These will be placed in the `dependencies` directory.
 
@@ -109,7 +109,7 @@ git clone https://github.com/njoy/NJOY21.git
 
 # Configure the build process
 cd NJOY21
-./metaconfigure/fetch_subprojects.py ../1.1.0-NJOY21.json
+./metaconfigure/fetch_subprojects.py ../1.1.1-NJOY21.json
 
 #### Transfer the entire NJOY21 directory to machine 
 #### not connected to the internet
@@ -117,7 +117,7 @@ cd NJOY21
 cd NJOY21
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=TRUE ../
+cmake -D fetched_subprojects=TRUE -D CMAKE_BUILD_TYPE=Release ../
 
 # Build NJOY21
 make
