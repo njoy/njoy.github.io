@@ -22,7 +22,7 @@ wget https://raw.githubusercontent.com/njoy/signatures/master/NJOY21/1.1.1-NJOY2
 # Configure the build process
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=true -D CMAKE_BULD_TYPE=Release ../
+cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=Release ../
 
 # Build NJOY1
 make
@@ -73,8 +73,9 @@ cd NJOY21
 ./metaconfigure/fetch_subprojects.py ../1.1.1-NJOY21.json
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=true -D CMAKE_BULD_TYPE=Release ../
+cmake -D fetched_subprojects=true -D CMAKE_BUILD_TYPE=Release ../
 ```
+Please note that if you are using a version prior to 1.1.1, you may run into some compile errors if you build in release mode using these instructions. If you do encounter errors, simply omit `-D CMAKE_BUILD_TYPE=Release` and the errors should go away. However, it's better that you move to 1.1.1 as NJOY built in release mode runs several times faster than without it.
 
 Note this will require a connection to the internet as `cmake` command will download (`clone`) the necessary dependencies. These will be placed in the `dependencies` directory.
 
@@ -116,7 +117,7 @@ cd NJOY21
 cd NJOY21
 mkdir bin
 cd bin
-cmake -D fetched_subprojects=TRUE -D CMAKE_BULD_TYPE=Release ../
+cmake -D fetched_subprojects=TRUE -D CMAKE_BUILD_TYPE=Release ../
 
 # Build NJOY21
 make
