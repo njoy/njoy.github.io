@@ -1,34 +1,18 @@
 ---
 layout: page
-title: NJOY Components
+title: Modern NJOY Components
 ---
-NJOY21 is made up of many smaller components. These components each solve some problem or implement some bit of code. Here are the various components that make up NJOY21:
-<ul>
-{% for project in site.data.components.Components %}
-  <li>
-     <a href="{{ project.url }}">{{ project.name }}</a> {{ project.description }}
-  </li>
-{% endfor %}
-</ul>
 
-## Supporting Components
-Some of the components maintained by NJOY developers don't directly contribute to the NJOY21 source code, but are supporting materials such as the website and documentation. Here are those components:
-<ul>
-{% for project in site.data.components.Supporting %}
-  <li>
-     <a href="{{ project.url }}">{{ project.name }}</a> {{ project.description }}
-  </li>
-{% endfor %}
-</ul>
+## Overview
 
-## Third-Party Components
-NJOY21 utilizes a number of third-party code, code that was not developed directly for NJOY. We maintain our own "adapters" to those third-party repositories. Our adapters take the third-party code and adapts it for our build/test system. The third-party components that we use are:
-<ul>
-{% for project in site.data.components.ThirdParty %}
-  <li>
-     <a href="{{ project.url }}">{{ project.name }}</a> {{ project.description }}
-  </li>
-{% endfor %}
-</ul>
+By moving away from the module structure of NJOY2016 to a component-based toolkit for a modern NJOY, we can allow for faster deployment of tools and integration in other tools. Providing both a C++ and Python interface at the same time will also help in deploying these tools more quickly. Once all necessary components are developed in this way, creating a modern equivalent of any legacy NJOY module will be relatively trivial to achieve (from a pure coding point of view, excluding the required V&V efforts). Prototypes can even be developed in Python before considering their implementation in C++.
 
-This is not a complete list of components. They are being updated on a regular basis.
+For these components, we can distinguish two types: format components and processing components. A format component obviously provides an interface to read, write and manipulate data in a given format (for example ENDF, GNDS or ACE) while processing components provide a specific processing operation (such as resonance reconstruction). Formatting components will never provide processing operations since most processing operations are essentially format agnostic (for example: we can linearise a cross section whether it comes from ENDF or GNDS).
+
+In what follows we will give an overview of our available modern NJOY components.
+
+## Formatting components
+
+[ENDFtk](https://github.com/njoy/ENDFtk) is our toolkit for reading and interacting with ENDF-6 formatted files. This toolkit provides a full C++ library along with python bindings.
+
+[ACEtk](https://github.com/njoy/ACEtk) is our toolkit for reading and interacting with ACE formatted files (the main nuclear data format used by MCNP). This toolkit provides a full C++ library along with python bindings.

@@ -1,11 +1,8 @@
- - title: "Getting NJOY"
-   url: "https://docs.njoy21.io/install.html"
+ - title: "NJOY2016"
+   url: "https://github.com/njoy/NJOY2016"
 
- - title: "Developers"
-   url: "https://njoy.github.io/DevelopersGuide"
+ - title: "NJOY21"
+   url: "https://github.com/njoy/NJOY21"
 
- - title: "Projects"
+ - title: "Modern NJOY components"
    url: "https://njoy.github.io/Components.html"
-
- - title: "About"
-   url: "https://njoy.github.io/about/index.html"
