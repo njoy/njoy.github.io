@@ -6,8 +6,8 @@ title: NJOY—Nuclear Data Processing Code
 This is the home page for NJOY, the nuclear data processing code developed at [Los Alamos National Laboratory](http://www.lanl.gov).
 
 Two versions of NJOY are currently managed and distributed:
- - [NJOY2016](https://njoy.github.io/NJOY2016) The main NJOY workhorse version, still maintained in Fortran.
- - [NJOY21](https://njoy.github.io/NJOY21) A C++ version wrapping regular NJOY2016 along with an input parser.
+ - [NJOY2016](https://github.com/njoy/NJOY2016) The main NJOY workhorse version, still maintained in Fortran.
+ - [NJOY21](https://github.com/njoy/NJOY21) A C++ version wrapping regular NJOY2016 along with an input parser.
 
 While it was initially intended to modernise NJOY on a module-by-module basis within NJOY21, the modernisation of NJOY has now gone in the direction of a component-based modernisation. As a result, NJOY21 will continue to use NJOY2016 for the foreseeable future.
 
@@ -22,9 +22,6 @@ Examples of these components that are now available to users are our [ENDFtk](ht
 
 ## Open Source Availability
 NJOY2016, NJOY21 and our modern NJOY components are freely available under the BSD 3-clause license. Both NJOY versions and any modern NJOY components are **free to use**, but the copyright and license must remain with the code.
-
-### Getting NJOY
-Instructions for obtaining, compiling, and testing NJOY can be found [here](https://docs.njoy21.io/install.html). Installation instructions for the modern NJOY components can be found on their respective repository on GitHub.
 
 ## Support or Contact
 Technical support for both versions of NJOY can be obtained with an email to: [njoy@lanl.gov](mailto:njoy@lanl.gov).
